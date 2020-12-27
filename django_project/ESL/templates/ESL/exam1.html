@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>paragraph</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="{% static 'ESL\css\styles1.min.css' %}">
+</head>
+
+<body class="text-center" id="color">
+    <div class="text-left" id="top-logo" style="height: 74px;margin: 0;padding: 1;"><img src="{% static 'ESL\images\logo1.png' %}" alt="Smiley face" height="74" width="74">
+<img src="{% static 'ESL\images\logo3.png' %}" alt="Smiley face" height="74" width="300"></div>
+    <div class="bg-primary div-maincolor" id="backgroud-image" style = "background-image:url({% static 'ESL\images\br1.jpg' %})" >
+        <div>
+            <!-- Start: top nav-bar -->  <nav class="d-flex navbar navbar-expand-sm navbar-custom sticky-top shadow-lg p-3 mb-5">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="navbar-collapse collapse d-flex" id="navbarCustom">
+
+        <ul class="navbar-nav">
+          <li class="nav-item">
+          <a class="nav-link text-center" href="{% url 'ESL-home2' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="{% url 'ESL-Contact_Us' %}">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="{% url 'ESL-learning' %}">Learning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center" href="{% url 'ESL-exam' %}">Exam</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-center" href="{% url 'ESL-practice' %}" id="navbarDropdown" data-toggle="dropdown">
+            Practice
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="{% url 'ESL-practice' %}">Interview Skills</a>
+            <a class="dropdown-item" href="#">Writing Skills</a>
+            <a class="dropdown-item" href="#">Reading Skills</a>
+          </div>
+            </li>
+
+          <li class=" ml-auto">
+          <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+        </li>
+          <li class=" ml-auto">
+          <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+              <li class=" ml-auto">
+          <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+                  <li class=" ml-auto">
+          <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+        </li><li class=" ml-auto">
+          <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+        </li>
+
+
+          <li class="nav-item ml-auto">
+          <a class="nav-link text-center ml-auto" href="{% url 'logot' %}">Logout</a>
+        </li>
+        </ul>
+        </div>
+        </nav>
+            <!-- End: top nav-bar -->
+        </div>
+        <!-- Start: nav_side-bar --><ul class="nav flex-column shadow d-flex sidebar mobile-hid">
+    <li class="nav-item logo-holder">
+        <div class="text-center text-white logo py-4 mx-4"><a class="text-white text-decoration-none" id="title" href="#"><strong>Sidebar</strong></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle"></i></a></div>
+    </li>
+    <li class="nav-item"><a class="nav-link active text-left text-white py-1 px-0" href="#"><i class="fas fa-tachometer-alt mx-3"></i><span class="text-nowrap mx-2">Dashboard</span></a></li>
+    <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="{% url 'profile' %}"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">User profile</span></a></li>
+    <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="far fa-life-ring mx-3"></i><span class="text-nowrap mx-2">Support tickets</span></a></li>
+    <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">Archive</span></a></li>
+    <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">Statistics</span></a></li>
+    <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link text-left text-white py-1 px-0 position-relative" href="#"><i class="fas fa-sliders-h mx-3"></i><span class="text-nowrap mx-2">Settings</span><i class="fas fa-caret-down float-none float-lg-right fa-sm"></i></a>
+        <div
+            role="menu" class="dropdown-menu border-0 animated fadeIn"><a role="presentation" class="dropdown-item text-white" href="#"><span>Change password</span></a><a role="presentation" class="dropdown-item text-white" href="#"><span>Change email</span></a><a role="presentation" class="dropdown-item text-white"
+                href="#"><span>More</span></a></div>
+    </li>
+    <li class="nav-item"><a class="nav-link text-left text-white py-1 px-0" href="#"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">Log out</span></a></li>
+</ul>
+        <!-- End: nav_side-bar -->
+        <div class="d-flex flex-column justify-content-center align-items-center" id="ans_box" style="height: 207px;width: 745px;background-color: rgba(37,37,37,0.59);filter: blur(0px);">
+
+            <h2>The correct answers are</h2>
+            <h5>&nbsp; &nbsp; &nbsp; &nbsp; The correct answers is dash &nbsp; &nbsp; - you have written " {{query.q1}} " &nbsp; &nbsp;<br></h5>
+            <h5>&nbsp; &nbsp; The correct answers is shock &nbsp; - you have written " {{query.q2}}"</h5>
+            <h5>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The correct answers dash &nbsp; &nbsp; - you have written " {{query.q3}}" &nbsp; &nbsp; &nbsp; &nbsp;<br></h5>
+            <h5>&nbsp; &nbsp; &nbsp; &nbsp;The correct answers is nail &nbsp; &nbsp;- you have written " {{query.q4}}" &nbsp;&nbsp;<br></h5>
+            <h5>&nbsp;And your score is {{query.marks}}out of 4 &nbsp;&nbsp;<br></h5>
+
+        </div>
+        <div id="relative"></div>
+        <!-- Start: Pretty Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 footer-navigation">
+                    <h3><a href="#">Company<span>logo </span></a></h3>
+                    <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+                    <p
+                        class="company-name">Company Name © 2015 </p>
+                </div>
+                <div class="col-sm-6 col-md-4 footer-contacts">
+                    <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                        <p><span class="new-line-span">21 Revolution Street</span> Paris, France</p>
+                    </div>
+                    <div><i class="fa fa-phone footer-contacts-icon"></i>
+                        <p class="footer-center-info email text-left"> +1 555 123456</p>
+                    </div>
+                    <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                        <p> <a href="#" target="_blank">support@company.com</a></p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-4 footer-about">
+                    <h4>About the company</h4>
+                    <p> Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet. </p>
+                    <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+                </div>
+            </div>
+        </footer>
+        <!-- End: Pretty Footer -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>

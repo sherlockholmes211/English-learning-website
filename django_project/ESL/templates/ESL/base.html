@@ -1,0 +1,458 @@
+{% load static %}
+
+<!DOCTYPE html>
+<meta charset="UTF-8">
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/stylepara.min.css' %}">
+
+    <title>HOME </title>
+<style>
+.centered{
+    position: absolute;
+    top: 120%;
+    left: 55%;
+    color: black;
+    transform: translate(-50%, -50%);
+}
+
+.center{
+    position: absolute;
+    top: 85%;
+    left:47%;
+    transform: translate(-50%, -50%);
+}
+
+    .left{
+        position:absolute;
+        top:130%;
+        left:50%;
+        color:white;
+        transform: translate(-50%, -50%);
+
+    }
+
+
+
+    </style>
+
+<body style="background-color: #E5E8E8;">
+
+<h6 style="background-color: #383735; margin-top: 0;">
+<table>
+
+<tr>
+    <td  style="  width: 5%; color: white;"><a href="{% url 'ESL-home' %}" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    </td>
+    <td  style="  width: 5%; color: white;"><a href="{% url 'ESL-Contact_Us' %}" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
+    </td>
+    <td style="width: 5%; color:white; text-align: left"><a href="{% url 'ESL-learning' %}" class="w3-bar-item w3-button w3-padding-large">LEARNING</a>
+    </td>
+    <td style=" width: 5%; color: white; text-align: left"><a href="{% url 'ESL-home' %}" class="w3-bar-item w3-button w3-padding-large">PROFILE</a>
+    </td>
+    <td style=" width: 5%; color:white;text-align: left"><a href="{% url 'ESL-exam' %}" class="w3-bar-item w3-button w3-padding-large">VIDEO</a>
+    </td>
+    <td style=" width: 5%; color:white;text-align: left"><a href="{% url 'ESL-audio' %}" class="w3-bar-item w3-button w3-padding-large">AUDIO</a>
+    </td>
+    <td style="width: 80%; color:white;text-align: end" ><a href="{% url 'loginpage' %}" class="w3-bar-item w3-button w3-padding-">Login</a>
+    </td>
+
+
+</tr>
+
+</table>
+
+
+<div class="mySlides" style=" margin-top: 0;">
+    <center>
+    <img src="{% static 'ESL\images\shakespier.jpg' %}"width=100% height="600px">
+        </center>
+    <div class="center" style="color:black;">
+      <center>
+        <!-- End: questions   <h1>LEARN IN A EASY WAY</h1>-->
+      </center>
+
+
+    </div>
+  </div>
+
+
+
+  <div class="mySlides" style="margin-top: 0;">
+<center>
+
+    <img src="{% static 'ESL\images\eng9.jpg' %}" width=100% height="600px" alt="my mini thing" />
+</center>
+
+        <h1 style="color: white">
+            <div class="center" style="color: black">
+              <!-- End: questions  JOY OF LEARNING -->
+            </div>
+        </h1>
+
+</div>
+
+
+<div class="mySlides" style="margin-top: 0;">
+    <center>
+    <img src="{% static 'ESL\images\eng3.jpg' %}"width="100%" height="600px" alt="my mini thing" />
+    </center>
+    <div class="center" style="color: white">
+     <!-- <h1> LEARNING IS NOT A SPECTATOR SPORT
+        </h1> -->
+    </div>
+</div>
+</h6>
+
+<marquee behavior="scroll" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+
+
+        <a href="https://www.youtube.com/watch?v=IhQt_fxGOcw" style="color: black">
+            <div>FOR DIRECT TUTORIALS FROM YOUTUBE
+            <div class="blink" style="color: red">
+
+                    CLICK HERE
+            </div>
+
+            <div class="blink" style="color: blue">
+                    CLICK HERE
+            </div>
+            </div>
+        </a>
+
+</marquee>
+
+
+<div class="container text-center text-md-left">
+    <div class="row text-center text-md-left mt-3 pb-3">
+        <div class="col-md-5 col-lg-20 col-xl-30 mx-auto mt-30">
+            <h6 style="" class="text-uppercase mb-4 font-weight-bold">
+         first step
+         </h6>
+            <p>
+
+                <img src="{% static 'ESL\images\reading.jpg' %}"width="350px" height="200px" style="border-radius: 12%">
+
+            </p>
+
+        </div>
+
+        <hr class="w-100 clearfix d-md-none">
+    <div class="col-md-5 col-lg-20 col-xl-20 mx-auto mt-30">
+        <h6 class="text-uppercase mb-4 font-weight-bold">
+            reading
+        </h6>
+        <p>
+            The habit of reading is one of the best qualities that a person can possess, Reading helps a great deal in building your confidence, reduces the stress and puts you in a better mood. Once you start reading books and make it your habit, you will eventually get addicted to it.
+        </p>
+
+    </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="container text-center text-md-left">
+    <div class="row text-center text-md-left mt-3 pb-3">
+        <div class="col-md-5 col-lg-20 col-xl-30 mx-auto mt-30">
+            <h6 class="text-uppercase mb-4 font-weight-bold"> second step
+            </h6>
+            <p>
+                Writing is an essential job skill. Writing is the primary basis upon which one's work, learning, and intellect will be judged—in college, in the work place and in the community. Writing equips us with communication and thinking skills. Writing expresses who we are as people.
+
+            </p>
+        </div>
+
+
+
+        <hr class="w-100 clearfix d-md-none">
+        <div class="col-md-5 col-lg-20 col-xl-20 mx-auto mt-30">
+
+            <h6 class="text-uppercase mb-4 font-weight-bold" style=" margin-right: 150px">writing</h6>
+            <div class="slide">
+            <h5>
+                <img src="{% static 'ESL\images\writing.jpg' %}" width="350px" height="200px" style="border-radius: 17%;margin-right: 150px;">
+            </h5>
+            </div>
+
+            <div class="slide">
+            <h5>
+                <img src="{% static 'ESL\images\writing1.png' %}" width="350px" height="200px" style="border-radius: 17%;margin-right: 150px;">
+            </h5>
+            </div>
+
+        </div>
+
+
+</div>
+</div>
+
+
+
+<div class="container text-center text-md-left">
+    <div class="row text-center text-md-left mt-3 pb-3">
+        <div class="col-md-5 col-lg-20 col-xl-30 mx-auto mt-30">
+        <h6 class="text-uppercase mb-4 font-weight-bold">
+        Third step
+        </h6>
+            <p>
+                <img src="{% static 'ESL\images\speaking.jpg' %} " width="350px" height="200px" style="border-radius: 12%">
+            </p>
+        </div>
+
+        <div class="col-md-5 col-lg-20 col-xl-30 mx-auto mt-30">
+        <h6 class="text-uppercase mb-4 font-weight-bold">
+        speaking
+        </h6>
+            <p>
+
+                It allows us to form connections, influence decisions, and motivate change. Without communication skills, the ability to progress in the working world and in life, itself, would be nearly impossible. Public speaking is one of the most important and most dreaded forms of communication
+            </p>
+        </div>
+
+
+    </div>
+</div>
+
+
+<div class="container text-center text-md-left">
+    <div class="row text-center text-md-left mt-3 pb-3">
+        <div class="col-md-5 col-lg-20 col-xl-30 mx-auto mt-30">
+            <h6 class="text-uppercase mb-4 font-weight-bold"> fourth step
+            </h6>
+            <p>
+                We then learned the six steps to improve our sentence structure.
+Ensure the information within the sentence is clear.
+Make sure to use transitional words.
+Use care with subordinate clauses.
+Use active voice.
+Use active verbs.
+Follow grammar rules.
+            </p>
+
+        </div>
+
+        <div class="col-md-5 col-lg-20 col-xl-30 mx-auto mt-30">
+        <h6 class="text-uppercase mb-4 font-weight-bold"> grammer
+            </h6>
+            <div class="blinkings">
+            <h5>
+                <img src="{% static 'ESL\images\grammer.jpg' %}" width="350px" height="200px" style="border-radius: 17%;margin-right: 150px;">
+            </h5>
+            </div>
+
+            <div class="blinkings">
+            <h5>
+                <img src="{% static 'ESL\images\eng5.jpg' %}" width="350px" height="200px" style="border-radius: 17%;margin-right: 150px;">
+            </h5>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<iframe width="100%" height="600px" src="https://www.youtube.com/embed/o9azjiIMbN8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+<p>
+here is some speaking tips and how to improve your speaking skills in english, the only way you learn english by speaking only and It allows us to form connections, influence decisions, and motivate change. Without communication skills, the ability to progress in the working world and in life, itself, would be nearly impossible. Public speaking is one of the most important and most dreaded forms of communication
+</p>
+
+
+
+
+
+
+
+
+
+
+<footer class="page-footer font-small mdb-color pt-4" style=" background-color: #2F3333; color: white;">
+
+
+  <div class="container text-center text-md-left">
+
+
+    <div class="row text-center text-md-left mt-3 pb-3">
+
+
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">ESL</h6>
+        <p>This is our own english learning website, you can learn english through practice and paticipating in exams,
+           you can compare your communication scores with differnt persons
+        </p>
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">contact us:</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold"><img src="{% static 'ESL\images\location.jpg' %}"width="35px" height="35x" style=" border-radius: 50%"> address</h6>
+        <p>
+          <a href="#!"></a>
+        </p>
+        <p>
+          IIIT Sricity,
+        </p>
+        <p>
+          Boys hostel,
+        </p>
+        <p>
+          Andhra pradesh
+        </p>
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h6 class="text-uppercase mb-4 font-weight-bold">contact via:</h6>
+          <h6 class="text-uppercase mb-4 font-weight-bold"> <img src="{% static 'ESL\images\phone.jpg' %}"width="35px" height="35px" style="border-radius: 50%"> phone</h6>
+        <p>
+          +91 9398265105
+        </p>
+        <p>
+          +91 7658987163
+        </p>
+        <p>
+          +91 9848234353
+        </p>
+        <p>
+          +91 9787675747
+        </p>
+      </div>
+
+
+      <hr class="w-100 clearfix d-md-none">
+
+
+      <div class=" col-lg-3 col-xl-3 mx-auto mt-3">
+
+          <h6 class="text-uppercase mb-4 font-weight-bold"><img src="{% static 'ESL\images\mail.png' %}"style="border-radius: 50%;width: 35px;height: 35px;"> mail</h6>
+        <p>
+            abc@gmail.com
+          </p>
+        <p>
+          xyz@gmail.com
+        <p>
+          pqr@hotmail.com
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+</footer>
+
+
+
+</footer>
+<p style="background-color: #151515; text-align: center; margin-top: 0; margin-bottom: 0; color: white;font-size: large">
+© 2020 Copyright, All Rights reserved
+</p>
+
+</body>
+
+
+<script>
+
+var myIndex = 0;
+sliding();
+
+function sliding() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(sliding, 2000);
+}
+</script>
+
+<script>
+
+var Ind = 0;
+slidings();
+
+function slidings() {
+  var k;
+  var y = document.getElementsByClassName("slide");
+  for (k = 0; k < y.length; k++) {
+    y[k].style.display = "none";
+  }
+  Ind++;
+  if (Ind > y.length) {Ind = 1}
+  y[Ind-1].style.display = "block";
+  setTimeout(slidings, 1000);
+}
+</script>
+
+
+
+
+
+<script>
+
+var Index = 0;
+blinks();
+
+function blinks() {
+  var j;
+  var z = document.getElementsByClassName("blink");
+  for (j = 0; j < z.length; j++) {
+    z[j].style.display = "none";
+  }
+  Index++;
+  if (Index > z.length) {Index = 1}
+  z[Index-1].style.display = "block";
+  setTimeout(blinks, 100);
+}
+</script>
+
+
+<script>
+
+var inde = 0;
+blinking();
+
+function blinking() {
+  var j;
+  var d = document.getElementsByClassName("blinkings");
+  for (j = 0; j < d.length; j++) {
+    d[j].style.display = "none";
+  }
+  inde++;
+  if (inde > d.length) {inde = 1}
+  d[inde-1].style.display = "block";
+  setTimeout(blinking, 1000);
+}
+</script>
+
+
+
+</html>

@@ -1,0 +1,222 @@
+{% load static %}
+{% load mathfilters %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>audio_new</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'ESL\css\profile&Exam.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="white_bc2"></div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">LINGISTOR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home!</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Start: 1 Row 3 Columns -->
+    <div>
+        <div class="container" id="prof">
+            <div class="row">
+                <div class="col-md-4" id="c1"><img src= {{ Profile.image.url }}></div>
+                <div class="col-md-4" id="col2">
+                    <h1>{{ Profile.user }}</h1>
+                    <h4>Bio -&nbsp;</h4>
+                    <p>Lorem jefb wef iwe fwf ew fcwef f wef wf cjdf vjka vjgs vj dxviosf cvj vjz csjs Vsj vkjdz vk xkv sjv nds vks va vj sdj&nbsp;</p><a href="{% url 'ESL-editprofile' %}" class="btn btn-primary">Edit</a></div>
+                <div class="col-md-4" id="col3">
+                    <h4 id="hei">Friends</h4>
+                    <p>friend - list</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End: 1 Row 3 Columns --><div id="container" style="width: 75%;">
+    <h1 class="lborder">Activity on the Week</h1>
+		<canvas id="canvas"></canvas>
+	<h1 class="lborder">Overal Progress</h1>
+    <h4 style="padding-left:2vw;padding-top:3vh">Present level</h4>
+    
+    {% if TMarks.tmarks <= 100 and TMarks.tmarks >= 0 %}
+    <img style="padding-left:2vw;padding-top:2vh"src="https://img.icons8.com/flat_round/100/000000/one-of-five-stars.png"/>
+    <h4 style="padding:0 2vw">completion for next level</h4>
+    <div style="padding:3vh 2vw;padding-bottom:3vh">
+        <div  class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{TMarks.tmarks|sub:0}}"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{TMarks.tmarks|sub:0}}%">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    {% if TMarks.tmarks <= 200 and TMarks.tmarks >= 100 %}
+    <img style="padding-left:2vw;padding-top:2vh"src="https://img.icons8.com/flat_round/100/000000/two-of-five-stars.png"/>
+    <h4 style="padding:0 2vw">completion for next level</h4>
+    <div style="padding:3vh 2vw;padding-bottom:3vh">
+        <div  class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{TMarks.tmarks|sub:100}}"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{TMarks.tmarks|sub:100}}%">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    {% if TMarks.tmarks <= 300 and TMarks.tmarks >= 200 %}
+    <img style="padding-left:2vw;padding-top:2vh"src="https://img.icons8.com/flat_round/100/000000/three-of-five-stars.png"/>
+    <h4 style="padding:0 2vw">completion for next level</h4>
+    <div style="padding:3vh 2vw;padding-bottom:3vh">
+        <div  class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{TMarks.tmarks|sub:200}}"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{TMarks.tmarks|sub:200}}%">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if TMarks.tmarks <= 400 and TMarks.tmarks >= 300 %}
+    <img style="padding-left:2vw;padding-top:2vh"src="https://img.icons8.com/flat_round/100/000000/four-of-five-stars.png"/>
+    <h4 style="padding:0 2vw">completion for next level</h4>
+    <div style="padding:3vh 2vw;padding-bottom:3vh">
+        <div  class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{TMarks.tmarks|sub:300}}"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{TMarks.tmarks|sub:300}}%">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {% if TMarks.tmarks <= 500 and TMarks.tmarks >= 400 %}
+    <img style="padding-left:2vw;padding-top:2vh"src="https://img.icons8.com/flat_round/100/000000/five-of-five-stars.png"/>
+    <h4 style="padding:0 2vw">completion for next level</h4>
+    <div style="padding:3vh 2vw;padding-bottom:3vh">
+        <div  class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{TMarks.tmarks|sub:200}}"
+            aria-valuemin="0" aria-valuemax="100" style="width:{{TMarks.tmarks|sub:200}}%">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <h1 class="lborder">favourites <span><i class="fa fa-heart" aria-hidden="true" style="font-size:40px"></i> </span> </h1>
+    <h2 style="padding:0 2vw">Audio</h2>
+    <div class="grid3">
+        <a href="Animation_Q.html"> 
+            <div class="grid-item">
+                <img src="{% static 'ESL\images\A1.jpg' %}" style="width:24vw;height: 24vh">
+                <div class="overlay">
+                    Conversion 1
+                </div>
+            </div>
+        </a>
+        
+        <a href="Animation_Q.html"> 
+            <div class="grid-item">
+                <img src="{% static 'ESL\images\A2.jpg' %}" style="width:24vw;height: 24vh">
+                <div class="overlay" >
+                    Conversion 2
+                </div>
+            </div>
+        </a>
+        
+        <a href="Animation_Q.html"> 
+            <div class="grid-item">
+                <img src="{% static 'ESL\images\A3.png' %}" style="width:24vw;height: 24vh">
+                <div class="overlay" >
+                    Conversion 3
+                </div>
+            </div>
+        </a>
+        
+    </div>
+   <h2 style="padding:10vh 2vw">Videos</h2>
+    <div class="grid3">
+        <a href="Animation_Q.html"> 
+            <div class="grid-item">
+                <img src="{% static 'ESL\images\VV1.jpg' %}" style="width:24vw;height: 24vh">
+                <div class="overlay" >
+                    Incredibles
+                </div>
+            </div>
+        </a>
+        
+        <a href="Animation_Q.html"> 
+            <div class="grid-item">
+                <img src="{% static 'ESL\images\VV6.jpg' %}" style="width:24vw;height: 24vh">
+                <div class="overlay" >
+                    Toy Story
+                </div>
+            </div>
+        </a>
+        
+        <a href="Animation_Q.html"> 
+            <div class="grid-item">
+                <img src="{% static 'ESL\images\VV3.jpg' %}" style="width:24vw;height: 24vh">
+                <div class="overlay" >
+                    Ice Age
+                </div>
+            </div>
+        </a>
+        
+    </div>
+</div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{% static 'ESL\js\profile&Exam.min.js' %}"></script>
+    <script>
+        new Chart(document.getElementById("canvas"), {
+    type: 'bar',
+
+    data: {
+      labels: ["6Days", "5Days", "4Days", "3Days", "2Days","Yst","Now"],
+      datasets: [
+        {
+          label: "Points",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#d45850","#ca5850"],
+          data: [{{Dmarks.6.dmarks}},{{Dmarks.5.dmarks}},{{Dmarks.4.dmarks}},{{Dmarks.3.dmarks}},{{Dmarks.2.dmarks}},{{Dmarks.1.dmarks}},{{Dmarks.0.dmarks}}]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      scales: {
+        yAxes: [{
+            display: true,
+            ticks: {
+                suggestedMin: 0,    // minimum will be 0, unless there is a lower value.
+                // OR //
+                beginAtZero: true   // minimum value will be 0.
+            }
+        }]
+    },
+      title: {
+        display: true,
+        text: 'No of Points in the Week'
+      }
+    }
+});
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,223 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>audio_new</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'ESL\css\profile&Exam.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">LINGISTOR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home!</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 id="A_E">English Course</h1>
+    <h2 id="A_E2">Listening</h2>
+    <div class="wrapper2"><div class="player">
+  <div class="head">
+    <div class="back"></div>
+    <div class="front">
+      <div class="avatar"><img src="http://vignette4.wikia.nocookie.net/lyricwiki/images/1/15/Semisonic_portrait.jpg/revision/latest?cb=20090409134209"/></div>
+      <div class="infos">
+        <div id="titulo_song1" class="titulo_song">KFC - Killing Fabulous Chickens</div>
+        <div id="totaltime" class="duracao_song"><i class="fa fa-clock-o">
+             Total time </i></div>
+        <div class="tags"><span>Educativo</span><span>English</span><span>Podcast</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="soundline">
+        <div id = "soundline1"></div>
+      </div>
+    <div class="controllers active">
+      <div id="pre" class="back"> </div>
+      <div onclick="playorpause()" id="plays" class="play"><i class="fa fa-pause"></i></div>
+      <div id="next" class="forward"></div>
+    </div>
+  </div>
+</div>
+<div class="rotation"></div></div>
+
+<form method="POST" action="{% url 'ESL-audio-genre-exam' %}">
+    {% csrf_token %}
+    <!-- Start: questions --><div class="audio_cover">
+    <div class="Q">
+        <h2 style="font-family:sans-serif;font-size:25px" >1.what is the mikes father name?
+            <span>
+                <input type="text" id="speechToText" name="q1" onclick="record()">
+            </span>
+        </h2>
+    </div>
+    
+    
+    <div class="Q">
+        <h2 style="font-family:sans-serif;font-size:25px" >2.how old is mike's in the video?
+        <span>
+                <input type="text" id="speechToText1" name="q2" onclick="record1()">
+            </span>
+        </h2>
+    </div>
+    
+    <div class="Q">
+        <h2 style="font-family:sans-serif;font-size:25px" >3.what technique mike used to escape?
+        <span>
+            <input type="text" id="speechToText2" name="q3" onclick="record2()">
+        </span>
+        </h2>
+    </div>
+    
+    <div class="Q">
+        <h2 style="font-family:sans-serif;font-size:25px" >4.justify your answer about mike?
+        <span>
+            <input type="text" id="speechToText3" name="q4" onclick="record3()">
+        </span>
+    </h2>
+    </div>
+    
+</div>
+    <!-- End: questions -->
+    <div class="audio_Q"></div>
+    <div class="su">
+        <!-- Start: submitbutton --><button class="button">
+	<span class="submit">Submit</span>
+	<span class="loading"><i class="fa fa-refresh"></i></span>
+	<span class="check"><i class="fa fa-check"></i></span>
+</button>
+        <!-- End: submitbutton --><button class="btn btn-primary fav" type="button">FAV</button></div>
+    <div id="bg-blue2"></div>
+    </form>
+    <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+
+        function record1() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText1').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+
+        function record2() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText2').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+
+        function record3() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText3').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+
+        function record4() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText4').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{% static 'ESL\js\profile&Exam.min.js' %}"></script>
+    <script>
+        var totaltime = document.getElementById("totaltime")
+ 
+ var songtitle = document.getElementById("titulo_song1")
+ songtitle.textContent = "SONG"
+ 
+ var soundline = document.getElementById("soundline1")
+ var song = new Audio()
+ song.src = "{% static 'ESL\images\song1.mp3' %}"
+ 
+ song.addEventListener('timeupdate',function(){ 
+             
+             var position = song.currentTime / song.duration;
+             soundline.style.width = position * 100 +'%';
+     totalTime(Math.round(song.duration));
+     
+             
+         });
+ 
+ 
+ function totalTime(seconds){
+    var min = Math.floor(seconds/60);
+     var sec = seconds%60;
+     min = (min<10)?"0"+min:min;
+     sec = (sec<10)?"0"+sec:sec;
+     totaltime.textContent = min+":"+sec;
+ }
+ 
+ function playorpause(){
+     if(song.paused){
+         song.play()
+         $('#plays').ready(function(){
+     $(this).find('i').toggleClass('fa-pause fa-play')
+ });
+     }
+     else{
+         song.pause()
+          $('#plays').ready(function(){
+     $(this).find('i').toggleClass('fa-pause fa-play')
+ });
+     }
+ }
+ 
+ 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="{% static 'ESL\css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="{% static 'ESL\css\videos.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">LINGISTOR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home!</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="white_bc2"></div>
+    <!-- Start: video_bg --><video class="myVideo" muted autoplay loop>
+    <source src="{% static 'ESL\images\N_E_video.mp4' %}" type="video/mp4">
+</video>
+
+    <!-- End: video_bg -->
+    <!-- Start: ty --><div id="typed3" class="ty"></div>
+    <!-- End: ty -->
+    <!-- Start: 1 Row 3 Columns -->
+    <div class="wrapper">
+        <!-- Start: video_symbol --><div id="instruction">
+    <i class="fa fa-video-camera" aria-hidden="true" style="font-size:75px"></i>
+    <div>
+        <a style="font-size:50px">Learn With Videos</a>
+    </div>
+</div>
+        <!-- End: video_symbol -->
+        <div class="container">
+            <div class="row">
+                <!-- Start: 1_1_column --><div class="col" style="text-align:center;align-items:center">
+    <p style="font-size:40px">Instructions</p>
+
+</div>
+                <!-- End: 1_1_column -->
+            </div>
+            <div class="row">
+                <!-- Start: column_1 --><div class="col-md-4" style="text-align:center;align-items:center">
+    <p class="in_instructions">STEP 1</p>
+    
+    <i class="fa fa-video-camera" aria-hidden="true" style="font-size:75px"></i>
+        <div class="text_align">
+            <a>Select the genre you Like</a>
+            <a>And chose the video to you want to learn </a>
+        </div>
+    
+</div>
+                <!-- End: column_1 -->
+                <!-- Start: column_2 --><div class="col-md-4" style="text-align:center;align-items:center">
+    <p class="in_instructions">STEP 2</p>
+    
+    <i class="fa fa-file-text" aria-hidden="true" style="font-size:75px"></i>
+        <div class="text_align">
+            <a>For the following questions</a>
+            <a>Write the correct solution's by listening to the video </a>
+        </div>
+    
+</div>
+                <!-- End: column_2 -->
+                <!-- Start: column_3 --><div class="col-md-4" style="text-align:center;align-items:center">
+    <p class="in_instructions">STEP 3</p>
+    
+    <i class="fa fa-graduation-cap" aria-hidden="true" style="font-size:90px"></i>
+        <div class="text_align">
+            <a>And by submiting the answers </a>
+            <a>you can improve the rank and you can know your proficency in in English
+            </a>
+        </div>
+    
+</div>
+                <!-- End: column_3 -->
+            </div>
+        </div>
+    </div>
+    <!-- End: 1 Row 3 Columns -->
+    <h1 class="select">Select The Genre</h1>
+    <div class="grid-container">
+        <!-- Start: 1 --><a href="{% url 'ESL-exam-genre' %}" >
+<div class="grid-item">
+    <img src="{% static 'ESL\images\V1.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+        <div>Animation</div>
+    </div>
+    
+</div>
+</a>
+        <!-- End: 1 -->
+        <!-- Start: 2 --><div class="grid-item">
+    <img src="{% static 'ESL\images\V2.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+    Action
+    </div>
+</div>
+        <!-- End: 2 -->
+        <!-- Start: 3 --><div class="grid-item">
+    <img src="{% static 'ESL\images\V3.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+    Sci-fi
+    </div>
+</div>
+        <!-- End: 3 -->
+        <!-- Start: 4 --><div class="grid-item">
+    <img src="{% static 'ESL\images\V4.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+    Rom-com
+    </div>
+</div>
+        <!-- End: 4 -->
+        <!-- Start: 5 --><div class="grid-item">
+    <img src="{% static 'ESL\images\V5.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+    Comedy
+    </div>
+</div>
+        <!-- End: 5 -->
+        <!-- Start: 6 --><div class="grid-item">
+    <img src="{% static 'ESL\images\V6.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+    Triller
+    </div>
+</div>
+        <!-- End: 6 -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="{% static 'ESL\js\videos.min.js' %}"></script>
+</body>
+
+</html>

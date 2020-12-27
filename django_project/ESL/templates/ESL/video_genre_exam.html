@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>new_Exam</title>
+    <link rel="stylesheet" href="{% static 'ESL\css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="{% static 'ESL\css\videos.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="white_bc1">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">LINGISTOR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home!</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 id="A_E">English Course</h1>
+    <h2 id="A_E2">Listening</h2>
+    <div class="wrapper2">
+        <!-- Start: video --><video class="A_video" controls >
+    <source src="{% static 'ESL\images\In.mp4' %}" type="video/mp4">
+</video>
+        <!-- End: video -->
+        <!-- Start: Question -->
+    <form method="POST" action="{% url 'ESL-exam-genre-exam' %}">
+        {% csrf_token %}    
+    <div class="A_EQuestions">
+    <label for="inp" class="inp">
+  <input type="text" id="inp1" name="q1" placeholder="&nbsp;">
+  <span class="label">1.How the trash is working?</span>
+  <span class="focus-bg"></span>
+</label>
+    <label for="inp" class="inp">
+  <input type="text" id="inp2" name="q2" placeholder="&nbsp;">
+  <span class="label">1.How the trash is working?</span>
+  <span class="focus-bg"></span>
+</label>
+    <label for="inp" class="inp">
+  <input type="text" id="inp3" name="q3" placeholder="&nbsp;">
+  <span class="label">1.How the trash is working?</span>
+  <span class="focus-bg"></span>
+</label><label for="inp" class="inp">
+  <input type="text" id="inp4" name="q4" placeholder="&nbsp;">
+  <span class="label">1.How the trash is working?</span>
+  <span class="focus-bg"></span>
+</label>
+</div>
+    
+        <!-- End: Question -->
+    </div><button class="button">
+	<span class="submit">Submit</span>
+	<span class="loading"><i class="fa fa-refresh"></i></span>
+	<span class="check"><i class="fa fa-check"></i></span>
+</button><button class="btn btn-primary bu" type="button">FAV</button>
+    <div class="white_bc"></div>
+    <div id="bg-blue"></div>
+    <div id="bg-blue2"></div>
+</form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="{% static 'ESL\js\videos.min.js' %}"></script>
+</body>
+
+</html>

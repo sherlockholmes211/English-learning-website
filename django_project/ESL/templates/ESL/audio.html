@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>audio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'ESL\css\audio.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="audio_Q1"></div>
+    <!-- Start: ty --><div id="typed3" class="ty"></div>
+    <!-- End: ty -->
+    <!-- Start: 1 Row 3 Columns -->
+    <div class="wrapper" style=".clean-navbar .navbar-nav .nav-item {&nbsp; padding-right: 2rem;">
+        <!-- Start: video_symbol --><div id="instruction">
+    <i class="fa fa-volume-up" aria-hidden="true" style="font-size:75px"></i>
+    <div>
+        <a style="font-size:50px">Learn With Audios
+        </a>
+    </div>
+</div>
+        <!-- End: video_symbol -->
+        <div class="container">
+            <div class="row">
+                <!-- Start: 1_1_column --><div class="col" style="text-align:center;align-items:center">
+    <p style="font-size:40px">Instructions</p>
+
+</div>
+                <!-- End: 1_1_column -->
+            </div>
+            <div class="row">
+                <!-- Start: column_1 --><div class="col-md-4" style="text-align:center;align-items:center">
+    <p class="in_instructions">STEP 1</p>
+    
+    <i class="fa fa-volume-up" aria-hidden="true" style="font-size:75px"></i>
+        <div class="text_align">
+            <a>Select the genre you Like</a>
+            <a>And chose the audio asent you want to learn </a>
+        </div>
+    
+</div>
+                <!-- End: column_1 -->
+                <!-- Start: column_2 --><div class="col-md-4" style="text-align:center;align-items:center">
+    <p class="in_instructions">STEP 2</p>
+    
+    <i class="fa fa-file-text" aria-hidden="true" style="font-size:75px"></i>
+        <div class="text_align">
+            <a>For the following questions</a>
+            <a>Speak the correct pronounciation in   the Audio </a>
+        </div>
+    
+</div>
+                <!-- End: column_2 -->
+                <!-- Start: column_3 --><div class="col-md-4" style="text-align:center;align-items:center">
+    <p class="in_instructions">STEP 3</p>
+    
+    <i class="fa fa-graduation-cap" aria-hidden="true" style="font-size:90px"></i>
+        <div class="text_align">
+            <a>And by submiting the answers </a>
+            <a>you can improve the rank and you can know your proficency in in English
+            </a>
+        </div>
+    
+</div>
+                <!-- End: column_3 -->
+            </div>
+        </div>
+    </div>
+    <!-- End: 1 Row 3 Columns -->
+    <!-- Start: video_bg --><video class="myVideo" muted autoplay loop>
+    <source src="{% static 'ESL\images\N_E_video.mp4' %}" type="video/mp4">
+</video>
+
+    <!-- End: video_bg -->
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+        <div class="container"><a class="navbar-brand logo" href="#">LINGISTOR</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse"
+                id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home!</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <h1 class="select">Select The Accent</h1>
+    <div class="grid-container">
+        <!-- Start: 1 --><a href="{% url 'ESL-audio-genre' %}"> 
+<div class="grid-item">
+    <img src="{% static 'ESL\images\british.jpg' %}"  style="width:24vw;height: 24vh">
+    <div class="overlay" >
+        <div>Bristish</div>
+    </div>
+    
+</div>
+</a>
+        <!-- End: 1 -->
+        <!-- Start: 2 --><div class="grid-item">
+    <img src="{% static 'ESL\images\america.jpg' %}" style="width:24vw;height: 24vh">
+    <div class="overlay" >
+    America
+    </div>
+</div>
+        <!-- End: 2 -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="{% static 'ESL\js\audio.min.js' %}"></script>
+</body>
+
+</html>

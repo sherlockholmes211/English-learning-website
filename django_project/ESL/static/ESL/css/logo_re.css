@@ -1,0 +1,20 @@
+#top-logo {
+  background-color: #ffffff;
+  border: 8px solid black;
+  border-style: double;
+}
+
+img {
+  position: absolute;
+}
+
+#hedi {
+  position: absolute;
+  top: 12px;
+}
+
+#top_logo {
+  position: absolute;
+  top: 11px;
+}
+

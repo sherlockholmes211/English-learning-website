@@ -1,0 +1,219 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Profiel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="{% static 'ESL\css\style_profile.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body id="stats">
+    <!-- Start: logo -->
+    <div class="text-left" id="top-logo" style="height: 74px;margin: 0;padding: 1;">
+        <h1 id="hedi" style="font-family: Aleo, serif;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Lingistor</h1><img id="top_logo" src="{% static 'ESL\images\logo_O1.png' %}" alt="Smiley face" height="50" width="80">
+</div>
+
+    <!-- End: logo -->
+    <!-- Start: top-nav -->  <nav class="d-flex navbar navbar-expand-sm navbar-custom sticky-top shadow-lg p-3 mb-5">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="navbar-collapse collapse d-flex" id="navbarCustom">
+
+<ul class="navbar-nav">
+  <li class="nav-item">
+  <a class="nav-link text-center" href="{% url 'ESL-home' %}">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-center" href="{% url 'ESL-Contact_Us' %}">Contact Us</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-center" href="{% url 'ESL-learning' %}" style="">Learning</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link text-center" href="{% url 'ESL-exam' %}">Exam</a>
+</li>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle text-center" href="{% url 'ESL-practice' %}" id="navbarDropdown" data-toggle="dropdown">
+    Practice
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="{% url 'ESL-practice' %}">Interview Skills</a>
+    <a class="dropdown-item" href="#">Writing Skills</a>
+    <a class="dropdown-item" href="#">Reading Skills</a>
+  </div>
+    </li>
+
+  <li class=" ml-auto">
+  <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+</li>
+  <li class=" ml-auto">
+  <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+      <li class=" ml-auto">
+  <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+          <li class=" ml-auto">
+  <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+</li><li class=" ml-auto">
+  <a class="nav-link text-center ml-auto" href="{% url 'ESL-exam' %}"></a>
+</li>
+
+
+  <li class="nav-item ml-auto">
+  <a class="nav-link text-center ml-auto" href="{% url 'logot' %}">Logout</a>
+</li>
+</ul>
+</div>
+</nav>
+    <!-- End: top-nav -->
+    <!-- Start: nav_side-bar --><ul class="nav flex-column shadow d-flex sidebar mobile-hid">
+    <li class="nav-item logo-holder">
+        <div class="text-center text-white logo py-4 mx-4"><a class="text-dark text-decoration-none" id="title" href="#"><strong>Sidebar</strong></a><a class="text-white float-right" id="sidebarToggleHolder" href="#"><i class="fas fa-bars" id="sidebarToggle"></i></a></div>
+    </li>
+    <li class="nav-item"><a class="nav-link text-left text-dark py-1 px-0" href="{% url 'profile' %}"><i class="fas fa-tachometer-alt mx-3"></i><span class="text-nowrap mx-2">Dashboard</span></a></li>
+    <li class="nav-item"><a class="nav-link active  text-left text-dark py-1 px-0" href="#"><i class="fas fa-user mx-3"></i><span class="text-nowrap mx-2">User profile</span></a></li>
+
+    <li class="nav-item"><a class="nav-link text-left text-dark py-1 px-0" href="#"><i class="fas fa-archive mx-3"></i><span class="text-nowrap mx-2">Archive</span></a></li>
+    <li class="nav-item"><a class="nav-link text-left text-dark py-1 px-0" href="#"><i class="fas fa-chart-bar mx-3"></i><span class="text-nowrap mx-2">Statistics</span></a></li>
+    <li class="nav-item dropdown"><a data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle nav-link text-left text-dark py-1 px-0 position-relative" href="#"><i class="fas fa-sliders-h mx-3"></i><span class="text-nowrap mx-2">Settings</span><i class="fas fa-caret-down float-none float-lg-right fa-sm"></i></a>
+        <div
+            role="menu" class="dropdown-menu border-0 animated fadeIn"><a role="presentation" class="dropdown-item text-white" href="#"><span>Change password</span></a><a role="presentation" class="dropdown-item text-white" href="#"><span>Change email</span></a><a role="presentation" class="dropdown-item text-white"
+                href="#"><span>More</span></a></div>
+    </li>
+    <li class="nav-item"><a class="nav-link text-left text-dark py-1 px-0" href="#"><i class="fas fa-sign-out-alt mx-3"></i><i class="fa fa-caret-right d-none position-absolute"></i><span class="text-nowrap mx-2">Log out</span></a></li>
+</ul>
+    <!-- End: nav_side-bar -->
+    <div id="sta_hed" style="font-size: 118px;">
+        <h1 style="font-family: Aleo, serif;font-size: 57px;">Statistics</h1>
+    </div>
+    <div id="code_pen">
+        <!-- Start: codepen --><div><svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <svg id="icon-chevron" viewBox="0 0 1024 1024">
+      <title>Click to Show or Hide Menu</title>
+      <path class="path1" d="M316 334l196 196 196-196 60 60-256 256-256-256z"></path>
+
+    </svg>
+  </defs>
+</svg>
+
+<ul class="dash-list">
+    <li id="dash-item--1" class="dash-item dash-item--published">
+        <div class="dash-item__header">
+            <h3 class="dash-item__title"><a class="text-dark" href="#">Semantic Quiz Review</a></h3>
+
+
+        </div>
+        <div class="dash-item__content">
+
+                        <ul class="quiz-results">
+                <li class="quiz-results__item quiz-results__item--views">
+                    <span class="quiz-results__number quiz-results__number--views">832</span>
+                    <div class="quiz-results__label">Levels</div>
+                </li>
+                <li class="quiz-results__item quiz-results__item--finishes">
+                    <span class="quiz-results__number quiz-results__number--finishes">588</span>
+                    <div class="quiz-results__label">Finished</div>
+                </li>
+                <li class="quiz-results__item quiz-results__item--average-score">
+                    <span class="quiz-results__number quiz-results__number--average-score">80</span>
+                    <div class="quiz-results__label">Average</div>
+                </li>
+            </ul>
+        </div>
+    </li>
+    <li id="dash-item--2" class="dash-item dash-item--published">
+        <div class="dash-item__header">
+            <h3 class="dash-item__title"><a class="text-dark" href="#">How well do you know English?</a></h3>
+
+        </div>
+        <div class="dash-item__content">
+
+            <ul class="quiz-results">
+                <li class="quiz-results__item quiz-results__item--views">
+                    <span class="quiz-results__number quiz-results__number--views">938</span>
+                    <div class="quiz-results__label">Levels</div>
+                </li>
+                <li class="quiz-results__item quiz-results__item--finishes">
+                    <span class="quiz-results__number quiz-results__number--finishes">856</span>
+                    <div class="quiz-results__label">Finished</div>
+                </li>
+                <li class="quiz-results__item quiz-results__item--average-score">
+                    <span class="quiz-results__number quiz-results__number--average-score">90</span>
+                    <div class="quiz-results__label">Average</div>
+                </li>
+            </ul>
+
+
+         </div>
+    </li>
+
+</ul></div>
+        <!-- End: codepen -->
+    </div>
+    <div id="codepen2"></div>
+    <div id="pro_contain">
+        <!-- Start: Profile Card -->
+        <div class="text-center profile-card" style="margin:15px;background-color:#ffffff;">
+            <div class="profile-card-img" style="background-image:url(&quot;iceland.jpg&quot;);height:150px;background-size:cover;"><img id="badge1" src="{% static 'ESL\images\chevron%20(3).png' %}"><img id="badge4" src="{% static 'ESL\images\chevron%20(2).png' %}"><img id="badge3" src="{% static 'ESL\images\chevron.png' %}"><img id="badge2" src="{% static 'ESL\images\chevron%20(1).png' %}"></div>
+            <div>
+              {% for post in query %}
+                <h3 id="pro_he">{{ post.first_name}} {{ post.last_name}} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br></h3><img class="rounded-circle"
+                    style="margin-top:-70px;" src="{% static 'ESL\images\avatar-dhg.png' %}" height="150px">
+                <!-- Start: Lorem Small -->
+                <p style="padding:20px;padding-bottom:0;padding-top:5px;"></p>
+              {% endfor %}
+                <!-- End: Lorem Small -->
+            </div>
+        </div>
+        <!-- End: Profile Card -->
+    </div>
+    <!-- Start: Pretty Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-sm-6 col-md-4 footer-navigation">
+                <h3><a href="#">l i n g i s t o e</a></h3>
+                <p class="links"><a href="#">Home</a><strong> · </strong><a href="#">Blog</a><strong> · </strong><a href="#">Pricing</a><strong> · </strong><a href="#">About</a><strong> · </strong><a href="#">Faq</a><strong> · </strong><a href="#">Contact</a></p>
+                <p class="company-name">Company Name © 2015 </p>
+            </div>
+            <div class="col-sm-6 col-md-4 footer-contacts">
+                <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
+                    <p><span class="new-line-span">krishna nagar</span>KURNOOL, INDIA</p>
+                </div>
+                <div><i class="fa fa-phone footer-contacts-icon"></i>
+                    <p class="footer-center-info email text-left"> +1 555 123456</p>
+                </div>
+                <div><i class="fa fa-envelope footer-contacts-icon"></i>
+                    <p> <a href="#" target="_blank">support@company.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-4 footer-about">
+                <h4>About the company</h4>
+                <p>In This website you will learn the basics of english and you can practice english untill you will become perfect in English</p>
+                <div class="social-links social-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-github"></i></a></div>
+            </div>
+        </div>
+    </footer>
+    <!-- End: Pretty Footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
